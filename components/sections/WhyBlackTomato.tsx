@@ -1,8 +1,9 @@
+import Image from "next/image";
 import type { JSX } from "react";
 
 interface Feature {
   title: string;
-  icon: JSX.Element;
+  icon: string;
   color: string;
 }
 
@@ -10,55 +11,28 @@ const features: Feature[] = [
   {
     title: "Award-winning planners",
     color: "text-amber-500",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 2l2.5 5 5.5.5-4 4 1 5.5-5-2.5-5 2.5 1-5.5-4-4 5.5-.5L12 2z" />
-        <circle cx="12" cy="12" r="10" />
-      </svg>
-    ),
+    icon: "/images/icons-comp/UHVNpPRV-award-icon.svg",
   },
   {
     title: "No-obligation quotes",
     color: "text-orange-500",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M4 4h16v12H4z" />
-        <path d="M8 20h8" />
-        <path d="M12 8v4" />
-        <path d="M10 10h4" />
-      </svg>
-    ),
+    icon: "/images/icons-comp/Icons-1.svg",
   },
   {
     title: "No planning fees",
     color: "text-emerald-500",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M3 6l9-4 9 4v12l-9 4-9-4z" />
-        <path d="M12 2v20" />
-      </svg>
-    ),
+    icon: "/images/icons-comp/1.svg",
   },
   {
     title: "24/7 on the ground support",
     color: "text-sky-600",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M21 16.5a3 3 0 01-3 3h-1l-4 3v-3H6a3 3 0 01-3-3v-9a3 3 0 013-3h12a3 3 0 013 3z" />
-        <path d="M12 8v4" />
-        <path d="M12 14h.01" />
-      </svg>
-    ),
+    icon: "/images/icons-comp/MSa4gZI8-support.svg",
   },
+
   {
     title: "Expert private guides",
     color: "text-purple-500",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <circle cx="12" cy="8" r="4" />
-        <path d="M6 22v-2a6 6 0 0112 0v2" />
-      </svg>
-    ),
+    icon: "/images/icons-comp/icons.svg",
   },
 ];
 
@@ -67,7 +41,7 @@ export default function WhyBlackTomato(): JSX.Element {
     <section className="w-full bg-white py-24 px-6">
       <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-sm tracking-[0.35em] font-semibold mb-20">
+        <h2 className="text-5xl tracking-[0.15em] font-medium mb-20 font-alternate">
           WHY BLACK TOMATO?
         </h2>
 
@@ -75,10 +49,14 @@ export default function WhyBlackTomato(): JSX.Element {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-14">
           {features.map((item, idx) => (
             <div key={idx} className="flex flex-col items-center">
-              <div className={`w-10 h-10 mb-6 ${item.color}`}>
-                {item.icon}
-              </div>
-              <p className="text-sm text-gray-800 text-center max-w-[160px]">
+              <Image
+                src={item.icon}
+                alt={item.title}
+                height={200}
+                width={200}
+                className={`w-20 h-20 mb-2 ${item.color}`}
+              />
+              <p className="text-lg text-gray-600 text-center max-w-[160px]">
                 {item.title}
               </p>
             </div>
@@ -86,7 +64,7 @@ export default function WhyBlackTomato(): JSX.Element {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-gray-200 my-16" />
+        <div className="h-px bg-gray-200 my-8" />
 
         {/* Trustpilot */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-sm">
@@ -96,7 +74,7 @@ export default function WhyBlackTomato(): JSX.Element {
             {Array.from({ length: 5 }).map((_, i) => (
               <span
                 key={i}
-                className="w-4 h-4 bg-emerald-500 text-white flex items-center justify-center text-xs"
+                className="w-4 h-4 bg-emerald-500 text-white flex items-center justify-center text-sm"
               >
                 ★
               </span>

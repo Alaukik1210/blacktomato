@@ -40,10 +40,10 @@ const steps: Step[] = [
 
 export default function JourneySection(): JSX.Element {
   return (
-    <section className="w-full bg-gray-100 py-24 px-6">
+    <section className="w-full bg-gray-100 py-12 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-center text-xl tracking-[0.15em] font-semibold mb-20">
+        <h2 className="text-center text-4xl tracking-[0.15em] font-medium mb-8 font-alternate">
           YOUR JOURNEY TO REMARKABLE TRAVEL
         </h2>
 
@@ -53,15 +53,15 @@ export default function JourneySection(): JSX.Element {
             <div key={step.number} className="text-center">
               {/* Number */}
               <div
-                className={`text-7xl lg:text-8xl font-bold mb-6 ${step.color} leading-none`}
-                style={{ height: "auto", display: "flex", alignItems: "center", justifyContent: "center", minHeight: "120px" }}
+                className={`font-alternate mb-6 ${step.color} leading-tight h-24 lg:h-32 flex items-center justify-center`}
+                style={{ fontSize: "160px" }}
               >
                 {step.number}
               </div>
 
               {/* Title */}
               <h3
-                className={`text-sm tracking-widest font-semibold mb-4 ${step.color}`}
+                className={`text-2xl tracking-widest font-medium mb-4 font-alternate ${step.color}`}
               >
                 {step.title}
               </h3>

@@ -4,6 +4,7 @@ import type { JSX } from "react";
 import Link from "next/link";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import Image from "next/image";
 
 export default function PrimaryFooter(): JSX.Element {
   const [openSection, setOpenSection] = useState<string | null>(null);
@@ -15,11 +16,11 @@ export default function PrimaryFooter(): JSX.Element {
     <footer className="bg-[#242323] text-gray-300">
       <div className="border-b border-white/10 py-8 sm:py-10">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-10 px-4 sm:px-6 opacity-70 text-xs sm:text-sm">
-          <span>Condé Nast Traveler</span>
-          <span>IATA</span>
-          <span>Travel + Leisure</span>
-          <span>Virtuoso Member</span>
-          <span>ABTA</span>
+          <Image src="/images/icons-comp/kVZ1z4VT-travelleisure.svg" alt="Condé Nast Traveler" width={100} height={30} />
+          <Image src="/images/icons-comp/abta-logo.svg" alt="Condé Nast Traveler" width={100} height={30} />
+          <Image src="/images/icons-comp/veWhg0JB-iata.svg" alt="Condé Nast Traveler" width={100} height={30} />
+          <Image src="/images/icons-comp/traveller.svg" alt="Condé Nast Traveler" width={100} height={30} />
+          <Image src="/images/icons-comp/vsDPx9UG-virtuoso-member.svg" alt="Condé Nast Traveler" width={100} height={60} />
         </div>
       </div>
 

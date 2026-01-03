@@ -84,8 +84,8 @@ export default function Testimonials() {
   return (
     <section className="w-full py-12 sm:py-16 md:py-24 px-4 sm:px-6">
       {/* Heading */}
-      <h2 className="text-center text-lg sm:text-2xl md:text-3xl tracking-[0.1em] font-bold mb-8 sm:mb-12 md:mb-16 font-brandon">
-        WHY DISCERNING TRAVELLERS<br />CHOOSE BLACK TOMATO
+      <h2 className="text-center text-2xl sm:text-2xl md:text-4xl tracking-[0.1em]  mb-8 sm:mb-12 md:mb-16 font-alternate  font-medium">
+        WHY DISCERNING TRAVELLERS CHOOSE BLACK TOMATO
       </h2>
 
       {/* Slider */}
@@ -101,9 +101,9 @@ export default function Testimonials() {
               key={item.id}
               className={`${visible === 1 ? "w-full" : "w-full md:w-1/2"} flex-shrink-0 px-2 sm:px-4 md:px-6`}
             >
-              <div className="flex flex-col items-center text-center gap-4 sm:gap-6">
+              <div className="flex  items-center text-center gap-4 sm:gap-6">
                 {/* Image */}
-                <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden flex-shrink-0">
+                <div className="w-48 h-48 sm:w-48 sm:h-48 md:w-60 md:h-60 rounded-full overflow-hidden flex-shrink-0">
                   <Image
                     src={item.image}
                     alt={item.author}

@@ -72,28 +72,43 @@ const TRIPS: Trip[] = [
 
 export default function DestinationSlider() {
   return (
-    <section className="bg-[#50412b] py-12 sm:py-16 md:py-20">
+    <section 
+      className="py-8 sm:py-16 md:py-12 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/images/Itineraries-Home-scaled.jpg')" }}
+    >
+      {/* Heading - Visible on md and below */}
+      <div className="lg:hidden px-4 sm:px-6 text-white mb-8">
+        <h2 className="text-2xl sm:text-3xl font-medium tracking-[1.2] font-alternate">
+          OUR MOST POPULAR<br />TRIPS
+        </h2>
+        <p className="mt-4 text-xs sm:text-sm italic text-white/70">
+          The trips our travellers are booking right now
+        </p>
+      </div>
+
       <div className="flex flex-col md:flex-row gap-6 md:gap-0">
         {/* Horizontal Scroll */}
         <div className="flex gap-3 sm:gap-4 md:gap-6 overflow-x-scroll pb-6 px-4 sm:px-6 md:px-0 md:pr-8 lg:pr-40 flex-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-          <div className="px-4 sm:px-6 md:px-8 lg:px-20 flex-shrink-0">
-            {/* Header */}
-            <div className="text-white">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-widest font-brandon">
+          {/* Blank Div - Only on lg */}
+          <div className="hidden lg:flex relative min-w-[200px] aspect-3/5 overflow-hidden shrink-0">
+          </div>
+
+          {/* Header - Only on lg */}
+          <div className="hidden lg:flex relative min-w-[320px] aspect-3/5 overflow-hidden shrink-0">
+            <div className="text-white flex flex-col mt-12 pb-8 px-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-[1.2] font-alternate">
                 OUR MOST POPULAR<br />TRIPS
               </h2>
-              <p className="mt-4 text-xs sm:text-sm italic text-white/70 max-w-sm">
+              <p className="mt-4 text-xs sm:text-sm italic text-white/70">
                 The trips our travellers are booking right now
               </p>
             </div>
           </div>
 
           {TRIPS.map((trip, index) => (
-            
-            
             <div
               key={index}
-              className="group relative min-w-[180px] xs:min-w-[220px] sm:min-w-[260px] md:min-w-[300px] lg:min-w-[320px] aspect-[3/5] overflow-hidden flex-shrink-0"
+              className="group relative min-w-[180px] xs:min-w-[220px] sm:min-w-[260px] md:min-w-[300px] lg:min-w-[320px] aspect-3/5 overflow-hidden shrink-0"
             >
               {/* Image */}
               <Image
@@ -113,7 +128,7 @@ export default function DestinationSlider() {
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 w-full p-2 sm:p-3 md:p-4 transition-all duration-300">
-                <h3 className="text-xs sm:text-sm font-semibold tracking-widest text-white line-clamp-2 font-brandon">
+                <h3 className="text-xs sm:text-sm font-semibold tracking-widest text-white line-clamp-2 font-alternate font-bold">
                   {trip.title}
                 </h3>
 
@@ -143,7 +158,7 @@ export default function DestinationSlider() {
               </div>
             </div>
           ))}
-          <div className="flex-shrink-0 flex items-end pb-6 px-2"><button className="border border-white px-4 sm:px-8 md:px-12 py-1 sm:py-2 text-xs tracking-widest text-white transition hover:bg-white hover:text-black whitespace-nowrap">
+          <div className="shrink-0 flex items-end pb-6 px-2"><button className="border border-white px-4 sm:px-8 md:px-12 py-1 sm:py-2 text-xs tracking-widest text-white transition hover:bg-white hover:text-black whitespace-nowrap">
             view all
           </button></div>
         </div>

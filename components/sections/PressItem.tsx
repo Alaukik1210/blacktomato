@@ -101,7 +101,7 @@ export default function PressCarousel() {
   }, [visible]);
 
   return (
-    <section className="w-full py-12 sm:py-16 md:py-20 px-4 sm:px-6">
+    <section className="w-full py-12 sm:py-16 md:py-8 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto overflow-hidden">
         {/* Slider */}
         <div
@@ -115,7 +115,7 @@ export default function PressCarousel() {
               key={item.id}
               className={`${visible === 1 ? "w-full" : visible === 2 ? "w-1/2" : "w-1/4"} flex-shrink-0 px-3 sm:px-4 md:px-6`}
             >
-              <div className="flex flex-col items-center text-center h-full justify-between gap-4 sm:gap-6 md:gap-8 py-4 md:py-6">
+              <div className="flex flex-col items-center text-center h-full justify-between gap-4 sm:gap-6 md:gap-8 py-1 md:py-2">
                 {/* Quote */}
                 <p className="text-xs sm:text-sm md:text-sm uppercase font-semibold tracking-widest text-gray-700 leading-relaxed font-brandon">
                   {item.quote}

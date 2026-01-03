@@ -9,7 +9,6 @@ export default function Hero() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      
       {/* Desktop Video */}
       <video
         className="absolute inset-0 hidden h-full w-full object-cover md:block"
@@ -37,20 +36,25 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-4">
-        <h1 className="max-w-4xl text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-widest font-brandon">
+        <h1 className="max-w-4xl text-2xl sm:text-4xl md:text-4xl lg:text-[55px] font-medium  tracking-widest font-alternate ">
           PUT THE WORLD <br />
           IN YOUR HANDS
         </h1>
-        <p className="mt-4 text-xs sm:text-sm md:text-base tracking-wide text-white/90  font-brandon">
-          Award-winning luxury travel experts crafting bespoke journeys for discerning travellers since 2005
+        <p className=" my-8 text-xs sm:text-sm md:text-sm tracking-widest  text-white/90  font-brandon">
+          AWARD-WINNING LUXURY TRAVEL EXPERTS CRAFTING BESPOKE JOURNEYS FOR DISCERNING
+          TRAVELLERS SINCE 2005
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <button className="rounded-sm border border-white px-6 sm:px-8 py-2 sm:py-3 text-xs sm:text-sm font-semibold tracking-widest transition hover:bg-white hover:text-black">
+          <button className="rounded-xs border border-white/70  sm:px-8 py-2 sm:py-3 
+  text-[11px] leading-[12px] font-bold tracking-[1.2px] transition hover:bg-white hover:text-black">
             EXPLORE OUR TRIPS
           </button>
-          <button className="rounded-sm bg-black  px-6 sm:px-8 py-2 sm:py-3 text-xs sm:text-sm font-semibold tracking-widest transition hover:bg-white hover:text-black">
-            BROWSE THE TRAVEL CALENDAR
-          </button>
+          <button className="rounded-xs bg-black  sm:px-8 py-2 sm:py-3 
+  text-[11px] leading-[12px] font-bold tracking-[1.2px] text-white
+  transition hover:bg-white hover:text-black">
+  BROWSE THE TRAVEL CALENDAR
+</button>
+
         </div>
       </div>
 
@@ -66,7 +70,9 @@ const ScrollIndicator: React.FC<{ onClick: () => void }> = ({ onClick }) => {
       className="absolute bottom-8 left-1/2 z-10 transform -translate-x-1/2 flex flex-col items-center gap-2 text-white/80 hover:text-white transition-all duration-300"
       aria-label="Scroll to content"
     >
-      <span className="text-xs sm:text-sm uppercase tracking-widest font-brandon">Scroll</span>
+      <span className="text-xs sm:text-sm uppercase tracking-widest font-brandon">
+        Scroll
+      </span>
       <ChevronDown className="w-6 h-6 animate-bounce" />
     </button>
   );

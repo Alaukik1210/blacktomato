@@ -9,14 +9,14 @@ export default function SplitEditorialSection(): JSX.Element {
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Founders story narrative section */}
           <div className="flex items-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24">
-            <div className="max-w-md mx-auto sm:mx-8 lg:mx-20">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-widest mb-6 font-brandon">
+            <div className="max-w-xl mx-auto sm:ml-12 lg: lg:ml-40">
+              <h2 className="text-xl sm:text-2xl md:text-5xl font-medium tracking-widest mb-6 font-alternate ">
                 WHAT WE DO
                 <br />
                 AND WHY WE DO IT
               </h2>
 
-              <p className="text-sm text-gray-700 leading-relaxed mb-8">
+              <p className="text-md text-gray-600 leading-relaxed mb-8">
                 Since our founding in 2005, Black Tomato has always been about
                 crafting remarkable, tailor-made trips for clients around the
                 world. Tom and James — our co-founders — know this better than
@@ -57,8 +57,8 @@ export default function SplitEditorialSection(): JSX.Element {
 
           {/* Luxury approach narrative section */}
           <div className="flex items-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24">
-            <div className="max-w-md mx-auto sm:mx-8 lg:mx-20">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-widest mb-2 font-brandon">
+            <div className="max-w-xl mx-auto sm:mx-8 lg:mx-20">
+              <h2 className="text-xl sm:text-2xl md:text-5xl font-medium tracking-widest mb-6 font-alternate">
                 OUR APPROACH TO LUXURY TRAVEL
               </h2>
 
@@ -66,12 +66,10 @@ export default function SplitEditorialSection(): JSX.Element {
                 The luxury travel experts
               </span>
 
-              <p className="text-sm text-gray-700 leading-relaxed mb-8">
-                Luxury holidays are personal. They mean something different for
-                each and every one of us. For some, luxury is hiking in peaceful
-                solitude through a remote corner of the desert, while for others
-                it’s the indulgence of sipping cocktails aboard a private yacht,
-                sailing gently through the Mediterranean. So to speak.
+              <p className="text-md text-gray-700 leading-relaxed mb-8">
+               Luxury holidays are personal. They mean something different for each and every one of us. For some, luxury is hiking in peaceful solitude through a remote corner of the desert, while for others it’s the indulgence of sipping cocktails aboard a private yacht, sailing gently through the Mediterranean. Whatever floats your boat, so to speak.
+
+Our team of luxury travel advisors are connoisseurs of luxury, curating unparalleled experiences, tailor made tours and bespoke adventures. Whether you seek the opulence of a secluded villa in the Tuscan hills or the thrill of an exclusive safari in the heart of Africa, we’ll craft a journey that exceeds your expectations.
               </p>
               <button className="bg-black text-white px-6 py-3 text-xs tracking-widest hover:bg-gray-800 transition">
                 WATCH THE FILM
