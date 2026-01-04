@@ -437,7 +437,7 @@ useEffect(() => {
                 isPastHero ? "text-[#444444]" : "text-white"
               }`}
             />
-            <button className="hidden lg:block bg-pink-600 lg:px-5 lg:py-2 sm:px-4 sm:py-2 text-[10px] sm:text-xs rounded-xs  lg:text-[10px] font-semibold font-brandon text-white hover:bg-pink-700 transition whitespace-nowrap">
+            <button className="hidden lg:block bg-pink-600 lg:px-6 lg:py-2.5 sm:px-4 sm:py-2 text-[10px] sm:text-xs rounded-[3px]  lg:text-[10px] font-semibold font-brandon text-white hover:bg-pink-700 transition whitespace-nowrap">
               ENQUIRE NOW
             </button>
           </div>

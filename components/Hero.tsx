@@ -67,13 +67,28 @@ const ScrollIndicator: React.FC<{ onClick: () => void }> = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="absolute bottom-8 left-1/2 z-10 transform -translate-x-1/2 flex flex-col items-center gap-2 text-white/80 hover:text-white transition-all duration-300"
+      className="absolute bottom-0 mt-2 cursor-pointer left-1/2 z-10 transform -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 hover:text-white transition-all duration-300"
       aria-label="Scroll to content"
     >
-      <span className="text-xs sm:text-sm uppercase tracking-widest font-brandon">
+      <span className="text-xs sm:text-sm uppercase tracking-widest mt-4 font-brandon">
         Scroll
       </span>
-      <ChevronDown className="w-6 h-6 animate-bounce" />
+      <div className="w-[2px] h-12 bg-white/50 animate-pulse-scale origin-top"></div>
+      <style jsx>{`
+        @keyframes pulse-scale {
+          0%, 100% {
+            transform: scaleY(0.2);
+            opacity: 0.6;
+          }
+          50% {
+            transform: scaleY(1);
+            opacity: 1;
+          }
+        }
+        .animate-pulse-scale {
+          animation: pulse-scale 2.5s ease-in-out infinite;
+        }
+      `}</style>
     </button>
   );
 };

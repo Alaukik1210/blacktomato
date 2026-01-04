@@ -9,13 +9,11 @@ import ReadyToStart from "@/components/sections/ReadyToStart";
 import SplitEditorialSection from "@/components/sections/SplitEditorialSection";
 import Testimonials from "@/components/sections/Testimonials";
 import WhyBlackTomato from "@/components/sections/WhyBlackTomato";
-import LegalFooter from "@/components/shared/LegalFooter";
-import PrimaryFooter from "@/components/shared/PrimaryFooter";
 
 export default function Page() {
 return (
     <>
-    <Navbar/>
+
     <Hero/>
     <HowWeAreDifferent/>
     <DestinationSlider/>
@@ -26,8 +24,6 @@ return (
     <SplitEditorialSection/>
     <WhyBlackTomato/>
     <ReadyToStart/>
-    <PrimaryFooter/>
-    <LegalFooter/>
 
     </>
 )
