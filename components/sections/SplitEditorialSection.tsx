@@ -4,13 +4,25 @@ import type { JSX } from "react";
 export default function SplitEditorialSection(): JSX.Element {
   return (
     <section className="w-full bg-white">
-      <div className="">
-        {/* Story row: Founders introduction with video call-to-action */}
+      <div>
+        {/* ================= Row 1 ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          {/* Founders story narrative section */}
-          <div className="flex items-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24">
-            <div className="max-w-xl mx-auto sm:ml-12 lg: lg:ml-40">
-              <h2 className="text-xl sm:text-2xl md:text-5xl font-medium tracking-widest mb-6 font-alternate ">
+          {/* Image 1 — FIRST on mobile, SECOND on desktop */}
+          <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-auto order-1 lg:order-2">
+            <Image
+              src="/images/triple-creek-ranch.avif"
+              alt="Founders discussion"
+              height={500}
+              width={500}
+              className="object-cover h-full w-full"
+              priority
+            />
+          </div>
+
+          {/* Text 1 — SECOND on mobile, FIRST on desktop */}
+          <div className="flex items-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 order-2 lg:order-1">
+            <div className="max-w-xl mx-auto sm:ml-12 lg:ml-40">
+              <h2 className="text-xl sm:text-2xl md:text-5xl font-medium tracking-widest mb-6 font-alternate">
                 WHAT WE DO
                 <br />
                 AND WHY WE DO IT
@@ -28,24 +40,12 @@ export default function SplitEditorialSection(): JSX.Element {
               </button>
             </div>
           </div>
-
-          {/* Founders video hero image */}
-          <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-auto">
-            <Image
-              src="/images/triple-creek-ranch.avif"
-              alt="Founders discussion"
-              height={500}
-              width={500}
-              className="object-cover h-full w-full"
-              priority
-            />
-          </div>
         </div>
 
-        {/* Luxury approach row: Philosophy and values with scenic imagery */}
+        {/* ================= Row 2 ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          {/* Luxury philosophy image on mobile (reordered on desktop) */}
-          <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-auto">
+          {/* Image 2 — THIRD on mobile, FIRST on desktop */}
+          <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-auto order-3 lg:order-1">
             <Image
               src="/images/triple-creek-ranch.avif"
               alt="Luxury travel landscape"
@@ -55,8 +55,8 @@ export default function SplitEditorialSection(): JSX.Element {
             />
           </div>
 
-          {/* Luxury approach narrative section */}
-          <div className="flex items-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24">
+          {/* Text 2 — FOURTH on mobile, SECOND on desktop */}
+          <div className="flex items-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 order-4 lg:order-2">
             <div className="max-w-xl mx-auto sm:mx-8 lg:mx-20">
               <h2 className="text-xl sm:text-2xl md:text-5xl font-medium tracking-widest mb-6 font-alternate">
                 OUR APPROACH TO LUXURY TRAVEL
@@ -67,10 +67,23 @@ export default function SplitEditorialSection(): JSX.Element {
               </span>
 
               <p className="text-md text-gray-700 leading-relaxed mb-8">
-               Luxury holidays are personal. They mean something different for each and every one of us. For some, luxury is hiking in peaceful solitude through a remote corner of the desert, while for others it’s the indulgence of sipping cocktails aboard a private yacht, sailing gently through the Mediterranean. Whatever floats your boat, so to speak.
+                Luxury holidays are personal. They mean something different for
+                each and every one of us. For some, luxury is hiking in peaceful
+                solitude through a remote corner of the desert, while for others
+                it’s the indulgence of sipping cocktails aboard a private yacht,
+                sailing gently through the Mediterranean. Whatever floats your
+                boat, so to speak.
 
-Our team of luxury travel advisors are connoisseurs of luxury, curating unparalleled experiences, tailor made tours and bespoke adventures. Whether you seek the opulence of a secluded villa in the Tuscan hills or the thrill of an exclusive safari in the heart of Africa, we’ll craft a journey that exceeds your expectations.
+                <br /><br />
+
+                Our team of luxury travel advisors are connoisseurs of luxury,
+                curating unparalleled experiences, tailor made tours and bespoke
+                adventures. Whether you seek the opulence of a secluded villa in
+                the Tuscan hills or the thrill of an exclusive safari in the
+                heart of Africa, we’ll craft a journey that exceeds your
+                expectations.
               </p>
+
               <button className="bg-black text-white px-6 py-3 text-xs tracking-widest hover:bg-gray-800 transition">
                 WATCH THE FILM
               </button>
