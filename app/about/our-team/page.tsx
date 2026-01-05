@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { TEAM_DATA } from "@/app/data/team";
 import Navbar from "@/components/Navbar";
+import { div } from "framer-motion/client";
 
 interface TeamSectionProps {
   title: string;
@@ -29,6 +30,9 @@ const TeamSection = ({
   nameClass,
   titleDescClass 
 }: TeamSectionProps) => (
+  <div>
+   
+ 
     <section className={`relative min-h-[80vh] w-full ${sectionClass}`}>
       {/* First Background Image */}
       <div 
@@ -87,12 +91,13 @@ const TeamSection = ({
         </div>
       </div>
       </section>
+       </div>
     );
   
   export default function OurTeam() {
     return (
     <main className="">
-      <Navbar/>
+       <Navbar appearance="page-gradient-scroll" />
       
       {/* Section 1: OUR TEAM */}
       <TeamSection 

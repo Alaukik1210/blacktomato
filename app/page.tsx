@@ -13,7 +13,7 @@ import WhyBlackTomato from "@/components/sections/WhyBlackTomato";
 export default function Page() {
 return (
     <>
-
+<Navbar appearance="home-scroll" />
     <Hero/>
     <HowWeAreDifferent/>
     <DestinationSlider/>

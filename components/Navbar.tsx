@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Search, Menu, X, User } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import {NAV_LINKS} from "@/app/data/navbar";
 import { DESTINATIONS_DATA } from "@/app/data/navbar";
 import { EXPERIENCES_DATA } from "@/app/data/navbar";
@@ -13,8 +14,17 @@ import { motion, AnimatePresence } from "framer-motion";
 
 
 type NavTab = "destinations" | "experiences" | "about" | "menu";
+type NavAppearance =
+  | "home-flat"
+  | "home-scroll"
+  | "page-gradient-scroll"
+  | "page-gradient-static";
 
-export default function Navbar() {
+interface NavbarProps {
+  appearance?: NavAppearance;
+}
+
+export default function Navbar({ appearance }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -30,8 +40,33 @@ export default function Navbar() {
   const [selectedExperienceCategory, setSelectedExperienceCategory] = useState<string | null>(null);
   const [selectedAboutCategory, setSelectedAboutCategory] = useState<string | null>(null);
 
+  const pathname = usePathname();
+  const resolvedAppearance: NavAppearance =
+    appearance ?? (pathname === "/" ? "home-scroll" : "page-gradient-scroll");
+  const usesPastHero =
+    resolvedAppearance === "home-scroll" || resolvedAppearance === "page-gradient-scroll";
+  const textIsDark = resolvedAppearance === "home-scroll" ? isPastHero : false;
+  const headerBackgroundClass = (() => {
+    switch (resolvedAppearance) {
+      case "home-flat":
+        return "bg-transparent";
+      case "home-scroll":
+        return isPastHero ? "bg-white shadow-md" : "bg-transparent";
+      case "page-gradient-scroll":
+      case "page-gradient-static":
+        return "bg-transparent lg:bg-gradient-to-b lg:from-black/20 lg:to-transparent";
+      default:
+        return "bg-transparent";
+    }
+  })();
+  const headerTranslateClass = isVisible ? "translate-y-0" : "-translate-y-full";
+
   // setActiveTab(activeTab);
   useEffect(() => {
+    if (!usesPastHero) {
+      return;
+    }
+
     let lastScrollY = 0;
 
     const handleScroll = () => {
@@ -49,32 +84,39 @@ export default function Navbar() {
       }
 
       lastScrollY = currentScrollY;
-      setScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [dropdownOpen]);
+  }, [dropdownOpen, usesPastHero]);
 
   // Set isPastHero when dropdown opens
-useEffect(() => {
-  const id = requestAnimationFrame(() => {
-    if (dropdownOpen) {
-      setIsPastHero(true);
-    } else {
-      setIsPastHero(window.scrollY > 600);
+  useEffect(() => {
+    if (!usesPastHero) {
+      return;
     }
-  });
+    const id = requestAnimationFrame(() => {
+      if (dropdownOpen) {
+        setIsPastHero(true);
+      } else {
+        setIsPastHero(window.scrollY > 600);
+      }
+    });
 
-  return () => cancelAnimationFrame(id);
-}, [dropdownOpen]);
+    return () => cancelAnimationFrame(id);
+  }, [dropdownOpen, usesPastHero]);
+
+  const closeDropdown = () => {
+    setDropdownOpen(false);
+    setActiveTab(null);
+    setHoveredContinent(null);
+    setHoveredCategory(null);
+  };
 
 
   return (
     <header
-      className={`w-full fixed z-50 transition-all duration-300 ${
-        isPastHero ? "bg-white shadow-md" : "bg-transparent"
-      } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+      className={`w-full fixed z-50 transition-all duration-300 ${headerBackgroundClass} ${headerTranslateClass}`}
     >
       <div className="mx-auto max-w-[1350px] pl-4">
         <div className="flex h-12 items-center justify-between">
@@ -82,15 +124,15 @@ useEffect(() => {
           <div className="lg:w-[300px]">
             <Link
               href="/"
-              className={` ${isPastHero ? "text-[#444444]" : "text-white"}`}
+              className={` ${textIsDark ? "text-[#444444]" : "text-white"}`}
             >
               <Image
                 src={`${
-                  isPastHero
+                  textIsDark
                     ? "/images/black-tomato-black.svg"
                     : "/images/black-tomato.svg"
                 }`}
-                className={` ${isPastHero ? "text-[#444444]" : "text-white"}`}
+                className={` ${textIsDark ? "text-[#444444]" : "text-white"}`}
                 alt="Black Tomato Logo"
                 width={40}
                 height={40}
@@ -102,7 +144,7 @@ useEffect(() => {
           <div className="hidden lg:flex gap-4 items-center">
             <Search
               className={`h-4 w-4 mx-4 cursor-pointer ${
-                isPastHero ? "text-[#444444]" : "text-white"
+                textIsDark ? "text-[#444444]" : "text-white"
               }`}
             />
 
@@ -118,7 +160,7 @@ useEffect(() => {
               cursor-pointer transition-colors relative ${
                         activeTab === item.id
                           ? "text-pink-600"
-                          : isPastHero
+                          : textIsDark
                           ? "text-[#444444] hover:text-gray-600"
                           : "text-white hover:text-gray-300"
                       } tracking-[1.2]`}
@@ -150,7 +192,7 @@ useEffect(() => {
                     <Link
                       href={item.href}
                       className={`text-xs font-medium ${
-                        isPastHero
+                        textIsDark
                           ? "text-[#444444] tracking-[1.2] hover:text-gray-600"
                           : "text-white hover:text-gray-300"
                       }`}
@@ -164,7 +206,7 @@ useEffect(() => {
 
             <button
               className={`mx-4 ${
-                isPastHero ? "text-[#444444]" : "text-white"
+                textIsDark ? "text-[#444444]" : "text-white"
               } cursor-pointer h-4 w-4 transition-transform duration-300`}
               onClick={() => {
                 if (activeTab === "menu" && dropdownOpen) {
@@ -240,14 +282,19 @@ useEffect(() => {
                                   .toLowerCase()
                                   .replace(/\s+/g, "-")}`}
                                 className="text-md font-[17px] text-gray-600 hover:text-pink-600 transition py-1"
+                                onClick={closeDropdown}
                               >
                                 {country}
                               </Link>
                             ))}
                           </div>
-                          <button className="mt-6 text-xs font-semibold tracking-widest text-gray-800 hover:text-pink-600 transition">
+                          <Link
+                            href={`/destinations/${hoveredContinent.toLowerCase().replace(/\s+/g, "-")}`}
+                            className="mt-6 inline-block text-xs font-semibold tracking-widest text-gray-800 hover:text-pink-600 transition"
+                            onClick={closeDropdown}
+                          >
                             BROWSE ALL {hoveredContinent.toUpperCase()}
-                          </button>
+                          </Link>
                         </>
                       )}
                     </div>
@@ -303,6 +350,7 @@ useEffect(() => {
                                 key={card.title}
                                 href={card.link}
                                 className="group relative h-72 overflow-hidden rounded"
+                                onClick={closeDropdown}
                               >
                                 <Image
                                   src={card.image}
@@ -358,6 +406,7 @@ useEffect(() => {
                                   .toLowerCase()
                                   .replace(/\s+/g, "-")}`}
                                 className="block text-md text-gray-700 hover:text-pink-600  transition"
+                                onClick={closeDropdown}
                               >
                                 {item}
                               </Link>
@@ -397,6 +446,7 @@ useEffect(() => {
                               key={month.name}
                               href={`/inspiration/${month.name.toLowerCase()}`}
                               className="group relative h-60 overflow-hidden rounded"
+                              onClick={closeDropdown}
                             >
                               <Image
                                 src={month.image}
@@ -426,7 +476,7 @@ useEffect(() => {
           <div className="hidden lg:flex items-center gap-5 text-right ">
             <span
               className={`text-xs tracking-widest font-semibold ${
-                isPastHero ? "text-[#444444]" : "text-white"
+                textIsDark ? "text-[#444444]" : "text-white"
               }`}
             >
               +44 207 426 9888
@@ -434,7 +484,7 @@ useEffect(() => {
 
             <User
               className={`h-5 w-5 ${
-                isPastHero ? "text-[#444444]" : "text-white"
+                textIsDark ? "text-[#444444]" : "text-white"
               }`}
             />
             <button className="hidden lg:block bg-pink-600 lg:px-6 lg:py-2.5 sm:px-4 sm:py-2 text-[10px] sm:text-xs rounded-[3px]  lg:text-[10px] font-semibold font-brandon text-white hover:bg-pink-700 transition whitespace-nowrap">
@@ -453,7 +503,7 @@ useEffect(() => {
             <button
               onClick={() => setOpen(true)}
               className={`${
-                isPastHero ? "text-[#444444]" : "text-white"
+                textIsDark ? "text-[#444444]" : "text-white"
               } flex items-center justify-center h-8`}
               aria-label="Open Menu"
             >
