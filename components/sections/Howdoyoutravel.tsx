@@ -103,7 +103,7 @@ export default function HowDoYouTravel() {
               {data.map((item, index) => (
                 <div
                   key={index}
-                  className="group relative h-40 md:aspect-[5/9] overflow-hidden"
+                  className="group relative  aspect-[3/4]  md:aspect-[5/9] overflow-hidden"
                 >
                   {/* Image */}
                   <Image
