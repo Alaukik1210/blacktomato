@@ -2,37 +2,13 @@
 "use client";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import OurPurposeSection from "@/components/OurpurposeSection";
+import MissionScrollSection from "@/components/MissionScrollSection";
+import OurValuesScrollSection from "@/components/OurValuesScrollSection";
 
-gsap.registerPlugin(ScrollTrigger);
 
-export default function OurPurpose() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const textsRef = useRef<HTMLDivElement[]>([]);
 
-  useEffect(() => {
-    if (!sectionRef.current) return;
-
-    gsap.fromTo(
-      textsRef.current,
-      { y: 120, opacity: 0 },
-      {
-        y: -120,
-        opacity: 1,
-        stagger: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "+=300%",
-          scrub: true,
-          pin: true,
-        },
-      }
-    );
-  }, []);
+export default function OurPurposePage() {
   return (
     <div className="bg-white">
       <Navbar appearance="page-gradient-static" />
@@ -246,32 +222,10 @@ export default function OurPurpose() {
           </div>
         </div>
       </div>
-      <section
-        ref={sectionRef}
-        style={{ backgroundImage: "url('/images/about/bg10.jpg')" }}
-        className="relative h-screen bg-cover bg-center bg-fixed flex items-center justify-center overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-black/40" />
-
-        <div className="relative z-10 w-full max-w-5xl px-6 text-center">
-          {[
-            "Travel is not about places",
-            "It’s about how you feel",
-            "The world opens when you do",
-            "Let curiosity lead the way",
-          ].map((text, i) => (
-            <div
-              key={i}
-              ref={(el) => {
-                if (el) textsRef.current[i] = el;
-              }}
-              className="absolute left-1/2 -translate-x-1/2 text-white uppercase font-medium tracking-widest
-                         text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
-            >
-              {text}
-            </div>
-          ))}
-        </div>
+      <section>
+       <OurPurposeSection/>
+       <MissionScrollSection/>
+       <OurValuesScrollSection/>
       </section>
     </div>
   );

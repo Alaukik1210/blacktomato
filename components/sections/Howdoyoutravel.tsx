@@ -11,11 +11,11 @@ interface TravelItem {
 
 /* ---------- Data ---------- */
 const BY_TRAVELLER: TravelItem[] = [
-  { title: "FAMILY", imageUrl: "/images/dest.png" },
-  { title: "COUPLES", imageUrl: "/images/dest.png" },
-  { title: "GROUPS", imageUrl: "/images/dest.png" },
-  { title: "HONEYMOON", imageUrl: "/images/dest.png" },
-  { title: "SOLO", imageUrl: "/images/dest.png" },
+  { title: " FAMILY ADVENTURES", imageUrl: "/images/dest.png" },
+  { title: "ROMANTIC ESCAPES", imageUrl: "/images/dest.png" },
+  { title: "GROUP TRAVEL", imageUrl: "/images/dest.png" },
+  { title: "HONEYMOON DREAMS", imageUrl: "/images/dest.png" },
+  { title: " SELF TRAVEL", imageUrl: "/images/dest.png" },
 ];
 
 const BY_MONTH: TravelItem[] = [
@@ -48,7 +48,9 @@ const BY_DESTINATION: TravelItem[] = [
 
 /* ---------- Component ---------- */
 export default function HowDoYouTravel() {
-  const [activeTab, setActiveTab] = useState<"traveller" | "destination" | "month">("traveller");
+  const [activeTab, setActiveTab] = useState<
+    "traveller" | "destination" | "month"
+  >("traveller");
 
   const data =
     activeTab === "traveller"
@@ -60,28 +62,27 @@ export default function HowDoYouTravel() {
   const isMonthTab = activeTab === "month";
 
   return (
-    <section className="bg-white py-16 px-4 sm:px-6">
+    <section className="bg-gray-50 py-16 px-4 sm:px-6">
       <div className="mx-auto max-w-7xl">
-
         {/* Title */}
-        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-light tracking-widest font-alternate">
-          HOW DO YOU TRAVEL?
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-light tracking-wide font-alternate">
+          DESIGNED AROUND YOU!
         </h2>
 
         {/* Tabs */}
         <div className="mt-6 flex justify-center gap-4 sm:gap-8 text-xs tracking-widest flex-wrap">
           {[
-            { id: "traveller", label: "BY TRAVELLER" },
-            { id: "destination", label: "BY DESTINATION" },
-            { id: "month", label: "BY MONTH" },
+            { id: "traveller", label: "TRAVEL STYLE" },
+            { id: "destination", label: "TOP PICKS" },
+            { id: "month", label: "BY SEASON" },
           ].map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id as "traveller" | "destination" | "month")}
+              onClick={() =>
+                setActiveTab(tab.id as "traveller" | "destination" | "month")
+              }
               className={`relative pb-2 cursor-pointer ${
-                activeTab === tab.id
-                  ? "text-pink-600"
-                  : "text-black/70"
+                activeTab === tab.id ? "text-pink-600" : "text-black/70"
               }`}
             >
               {tab.label}
@@ -95,41 +96,14 @@ export default function HowDoYouTravel() {
         {/* Grid - Responsive based on tab and screen size */}
         {isMonthTab ? (
           // MONTH TAB: full-width below md, 3-col grid on md+
-          <div className="mt-16 gap-4 sm:gap-6">
-            {/* Mobile: full width, less height */}
-            <div className="md:hidden grid grid-cols-1 gap-4">
-              {data.map((item, index) => (
-                <div
-                  key={index}
-                  className="group relative w-full h-24 overflow-hidden"
-                >
-                  {/* Image */}
-                  <Image
-                    src={item.imageUrl}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                  />
-
-                  {/* Darken on hover */}
-                  <div className="absolute inset-0 bg-black/20 transition group-hover:bg-black/40" />
-
-                  {/* Title */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-xs font-semibold tracking-widest text-white">
-                      {item.title}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="mt-16">
 
             {/* Desktop: 3-col grid */}
-            <div className="hidden md:grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3  md:grid-cols-6 gap-6">
               {data.map((item, index) => (
                 <div
                   key={index}
-                  className="group relative aspect-[3/5] overflow-hidden"
+                  className="group relative aspect-[5/9] overflow-hidden"
                 >
                   {/* Image */}
                   <Image
@@ -174,8 +148,8 @@ export default function HowDoYouTravel() {
                   <div className="absolute inset-0 bg-black/20 transition group-hover:bg-black/40" />
 
                   {/* Title */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-xs font-semibold tracking-widest text-white">
+                  <div className="absolute inset-0 flex  text-center items-center justify-center">
+                    <p className="text-xs font-semibold  tracking-widest leading-base text-white">
                       {item.title}
                     </p>
                   </div>
@@ -188,7 +162,7 @@ export default function HowDoYouTravel() {
               {data.map((item, index) => (
                 <div
                   key={index}
-                  className="group relative aspect-[3/5] overflow-hidden"
+                  className="group relative aspect-[2/5] lg:aspect-[5/9]  overflow-hidden"
                 >
                   {/* Image */}
                   <Image
@@ -203,9 +177,26 @@ export default function HowDoYouTravel() {
 
                   {/* Title */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="text-sm font-semibold tracking-widest text-white">
+                    {/* md only: stacked & centered */}
+                    <div className="hidden md:flex lg:hidden flex-col items-center justify-center text-center leading-[1.15]">
+                      {item.title
+                        .trim()
+                        .split(" ")
+                        .slice(0, 2)
+                        .map((word, i) => (
+                          <span
+                            key={i}
+                            className="block text-sm font-semibold tracking-widest text-white"
+                          >
+                            {word}
+                          </span>
+                        ))}
+                    </div>
+
+                    {/* mobile + lg+: single line */}
+                    <span className="md:hidden lg:block text-sm font-semibold tracking-widest text-white text-center">
                       {item.title}
-                    </p>
+                    </span>
                   </div>
                 </div>
               ))}
@@ -214,13 +205,13 @@ export default function HowDoYouTravel() {
         )}
 
         {/* CTA */}
-        {(activeTab === "destination" || activeTab === "traveller") &&
+        {(activeTab === "destination" || activeTab === "traveller") && (
           <div className="mt-16 flex justify-center">
             <button className="bg-black px-6 py-3 text-xs tracking-widest text-white hover:bg-black/80 transition">
               VIEW MORE
             </button>
           </div>
-        }
+        )}
       </div>
     </section>
   );

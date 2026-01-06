@@ -47,13 +47,9 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
           <button className="rounded-xs border border-white/70  sm:px-8 py-2 sm:py-3 
   text-[11px] leading-[12px] font-bold tracking-[1.2px] transition hover:bg-white hover:text-black">
-            EXPLORE OUR TRIPS
+           JOURNEYS THAT INSPIRE
           </button>
-          <button className="rounded-xs bg-black  sm:px-8 py-2 sm:py-3 
-  text-[11px] leading-[12px] font-bold tracking-[1.2px] text-white
-  transition hover:bg-white hover:text-black">
-  BROWSE THE TRAVEL CALENDAR
-</button>
+         
 
         </div>
       </div>

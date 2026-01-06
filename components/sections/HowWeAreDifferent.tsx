@@ -35,9 +35,7 @@ export default function HowWeAreDifferent() {
           </p>
 
           <p className="mt-6 text-[18px] font-light font-brandon leading-9 text-[#52575C]">
-            We specialise in creating remarkable, tailor-made experiences that
-            thoughtfully connect our clients to the world and inspire them to
-            explore it with curiosity, humility and a sense of wonder.
+           Travel should feel inspiring, never overwhelming. We believe exceptional journeys begin with understanding what truly matters to you - not just the destination, but the feeling you want to arrive with. That’s why we take the time to listen first. We thoughtfully handle every detail, offering considered insights drawn from our own experiences, and curate journeys that feel deeply personal. No pressure, no templates - just discreet guidance and seamless planning, shaped around your story.
           </p>
 
           <p className="mt-4 text-[18px] leading-9 text-[#52575C]">

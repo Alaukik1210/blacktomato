@@ -56,7 +56,7 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-export default function Testimonials() {
+export default function  Testimonials() {
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(2);
 
@@ -76,7 +76,7 @@ export default function Testimonials() {
       setIndex((prev) =>
         prev + visible >= testimonials.length ? 0 : prev + visible
       );
-    }, 8000);
+    }, 5000);
 
     return () => clearInterval(timer);
   }, []);

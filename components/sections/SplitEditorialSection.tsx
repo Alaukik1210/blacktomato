@@ -6,9 +6,9 @@ export default function SplitEditorialSection(): JSX.Element {
     <section className="w-full bg-white">
       <div>
         {/* ================= Row 1 ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Image 1 — FIRST on mobile, SECOND on desktop */}
-          <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-auto order-1 lg:order-2">
+          <div className="relative h-[250px] sm:h-[300px] md:h-auto order-1 md:order-2">
             <Image
               src="/images/triple-creek-ranch.avif"
               alt="Founders discussion"
@@ -20,7 +20,7 @@ export default function SplitEditorialSection(): JSX.Element {
           </div>
 
           {/* Text 1 — SECOND on mobile, FIRST on desktop */}
-          <div className="flex items-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 order-2 lg:order-1">
+          <div className="flex items-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 order-2 md:order-1">
             <div className="max-w-xl mx-auto sm:ml-12 lg:ml-40">
               <h2 className="text-xl sm:text-2xl md:text-5xl font-medium tracking-widest mb-6 font-alternate">
                 WHAT WE DO
@@ -43,9 +43,9 @@ export default function SplitEditorialSection(): JSX.Element {
         </div>
 
         {/* ================= Row 2 ================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Image 2 — THIRD on mobile, FIRST on desktop */}
-          <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-auto order-3 lg:order-1">
+          <div className="relative h-[250px] sm:h-[300px] md:h-auto order-3 md:order-1">
             <Image
               src="/images/triple-creek-ranch.avif"
               alt="Luxury travel landscape"
@@ -56,7 +56,7 @@ export default function SplitEditorialSection(): JSX.Element {
           </div>
 
           {/* Text 2 — FOURTH on mobile, SECOND on desktop */}
-          <div className="flex items-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 order-4 lg:order-2">
+          <div className="flex items-center px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 order-4 md:order-2">
             <div className="max-w-xl mx-auto sm:mx-8 lg:mx-20">
               <h2 className="text-xl sm:text-2xl md:text-5xl font-medium tracking-widest mb-6 font-alternate">
                 OUR APPROACH TO LUXURY TRAVEL

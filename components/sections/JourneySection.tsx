@@ -48,7 +48,7 @@ export default function JourneySection(): JSX.Element {
         </h2>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
           {steps.map((step) => (
             <div key={step.number} className="text-center">
               {/* Number */}

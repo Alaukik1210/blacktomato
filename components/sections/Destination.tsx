@@ -79,10 +79,10 @@ export default function DestinationSlider() {
       {/* Heading - Visible on md and below */}
       <div className="lg:hidden px-4 sm:px-6 text-white mb-8">
         <h2 className="text-2xl sm:text-3xl font-medium tracking-[1.2] font-alternate">
-          OUR MOST POPULAR<br />TRIPS
+          OUR MOST SOUGHT-AFTER <br />JOURNEYS
         </h2>
         <p className="mt-4 text-xs sm:text-sm italic text-white/70">
-          The trips our travellers are booking right now
+          The experiences our travellers are choosing right now...
         </p>
       </div>
 
@@ -97,10 +97,10 @@ export default function DestinationSlider() {
           <div className="hidden lg:flex relative min-w-[320px] aspect-3/5 overflow-hidden shrink-0">
             <div className="text-white flex flex-col mt-12 pb-8 px-6">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-[1.2] font-alternate">
-                OUR MOST POPULAR<br />TRIPS
+                 OUR MOST SOUGHT-AFTER<br />JOURNEYS
               </h2>
               <p className="mt-4 text-xs sm:text-sm italic text-white/70">
-                The trips our travellers are booking right now
+                The experiences our travellers are choosing right now...
               </p>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function DestinationSlider() {
           {TRIPS.map((trip, index) => (
             <div
               key={index}
-              className="group relative min-w-[180px] xs:min-w-[220px] sm:min-w-[260px] md:min-w-[300px] lg:min-w-[320px] aspect-3/5 overflow-hidden shrink-0"
+              className="group relative min-w-[180px] xs:min-w-[220px] sm:min-w-[260px] md:min-w-[300px] lg:min-w-[320px] aspect-3/5 lg:aspect-[3/4] overflow-hidden shrink-0"
             >
               {/* Image */}
               <Image
