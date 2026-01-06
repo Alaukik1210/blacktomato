@@ -13,28 +13,28 @@ const steps: Step[] = [
     title: "YOU ENQUIRE",
     description:
       "Using our online form. We’ll then have a conversation (or two).",
-    color: "text-orange-500",
+    color: "text-[#CC5426]",
   },
   {
     number: "02",
     title: "RECEIVE YOUR FREE QUOTE",
     description:
       "Without a ‘booking fee’ attached, which we’ve never believed in.",
-    color: "text-emerald-500",
+    color: "text-[#379C8A]",
   },
   {
     number: "03",
     title: "WE REFINE TOGETHER",
     description:
       "Until it fits you perfectly. We want you to feel totally comfortable with your plan.",
-    color: "text-sky-600",
+    color: "text-[#1E6E9F]",
   },
   {
     number: "04",
     title: "YOU TRAVEL",
     description:
       "With confidence and 24/7 support throughout your journey.",
-    color: "text-blue-900",
+    color: "text-[#023B66]",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function JourneySection(): JSX.Element {
     <section className="w-full bg-gray-100 py-12 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-center text-4xl tracking-[0.15em] font-medium mb-8 font-alternate">
+        <h2 className="text-center text-5xl tracking-wider font-medium mb-8 font-alternate">
           YOUR JOURNEY TO REMARKABLE TRAVEL
         </h2>
 
@@ -61,13 +61,13 @@ export default function JourneySection(): JSX.Element {
 
               {/* Title */}
               <h3
-                className={`text-2xl tracking-widest font-medium mb-4 font-alternate ${step.color}`}
+                className={`text-xl tracking-wide font-semibold pt-4 mb-4 font-brandon ${step.color}`}
               >
                 {step.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm text-gray-700 leading-relaxed max-w-xs mx-auto font-normal">
+              <p className="text-md text-gray-500 leading-relaxed max-w-xs mx-auto font-normal">
                 {step.description}
               </p>
             </div>
@@ -76,7 +76,7 @@ export default function JourneySection(): JSX.Element {
 
         {/* CTA */}
         <div className="flex justify-center mt-20">
-          <button className="border border-black px-8 py-3 text-xs tracking-widest hover:bg-black hover:text-white transition">
+          <button className="border border-black px-8 py-3 text-xs rounded-xs font-bold tracking-widest hover:bg-black hover:text-white transition">
             START YOUR FREE CONSULTATION
           </button>
         </div>

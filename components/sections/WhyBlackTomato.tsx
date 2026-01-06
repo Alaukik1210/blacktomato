@@ -32,7 +32,7 @@ const features: Feature[] = [
   {
     title: "Expert private guides",
     color: "text-purple-500",
-    icon: "/images/icons-comp/icons.svg",
+    icon: "/images/icons-comp/ico.svg",
   },
 ];
 
@@ -41,12 +41,12 @@ export default function WhyBlackTomato(): JSX.Element {
     <section className="w-full bg-white py-24 px-6">
       <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-5xl tracking-[0.15em] font-medium mb-20 font-alternate">
+        <h2 className="text-5xl tracking-wider font-medium mb-20 font-alternate">
           WHY BLACK TOMATO?
         </h2>
 
         {/* Features */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-14">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-14">
           {features.map((item, idx) => (
             <div key={idx} className="flex flex-col items-center">
               <Image

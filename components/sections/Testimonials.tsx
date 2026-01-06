@@ -84,7 +84,7 @@ export default function  Testimonials() {
   return (
     <section className="w-full py-12 sm:py-16 md:py-24 px-4 sm:px-6">
       {/* Heading */}
-      <h2 className="text-center text-2xl sm:text-2xl md:text-4xl tracking-[0.1em]  mb-8 sm:mb-12 md:mb-16 font-alternate  font-medium">
+      <h2 className="text-center text-5xl sm:text-5xl md:text-5xl tracking-wider  mb-8 sm:mb-12 md:mb-16 font-alternate  font-medium">
         WHY DISCERNING TRAVELLERS CHOOSE BLACK TOMATO
       </h2>
 

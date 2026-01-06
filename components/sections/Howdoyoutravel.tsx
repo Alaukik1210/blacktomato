@@ -65,12 +65,12 @@ export default function HowDoYouTravel() {
     <section className="bg-gray-50 py-16 px-4 sm:px-6">
       <div className="mx-auto max-w-7xl">
         {/* Title */}
-        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-light tracking-wide font-alternate">
+        <h2 className="text-center text-5xl sm:text-4xl md:text-5xl font-medium tracking-wider font-alternate">
           DESIGNED AROUND YOU!
         </h2>
 
         {/* Tabs */}
-        <div className="mt-6 flex justify-center gap-4 sm:gap-8 text-xs tracking-widest flex-wrap">
+        <div className="mt-6 flex justify-center gap-8 sm:gap-8 text-xs tracking-widest flex-wrap">
           {[
             { id: "traveller", label: "TRAVEL STYLE" },
             { id: "destination", label: "TOP PICKS" },
@@ -99,11 +99,11 @@ export default function HowDoYouTravel() {
           <div className="mt-16">
 
             {/* Desktop: 3-col grid */}
-            <div className="grid grid-cols-3  md:grid-cols-6 gap-6">
+            <div className="grid grid-cols-3  md:grid-cols-6 gap-4">
               {data.map((item, index) => (
                 <div
                   key={index}
-                  className="group relative aspect-[5/9] overflow-hidden"
+                  className="group relative h-40 md:aspect-[5/9] overflow-hidden"
                 >
                   {/* Image */}
                   <Image
@@ -130,11 +130,11 @@ export default function HowDoYouTravel() {
           // TRAVELLER & DESTINATION TABS: full-width below md, 5-col grid above md
           <div className="mt-16">
             {/* Mobile: full width, less height */}
-            <div className="md:hidden grid grid-cols-1 gap-4">
+            <div className="md:hidden grid grid-cols-1 gap-10">
               {data.map((item, index) => (
                 <div
                   key={index}
-                  className="group relative w-full h-24 overflow-hidden"
+                  className="group relative w-full h-40 overflow-hidden"
                 >
                   {/* Image */}
                   <Image

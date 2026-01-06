@@ -13,7 +13,7 @@ export default function PrimaryFooter(): JSX.Element {
     setOpenSection(openSection === section ? null : section);
   };
   return (
-    <footer className="bg-[#242323] text-gray-300">
+    <footer className="bg-[#242323]  text-gray-300">
       <div className="border-b border-white/10 py-8 sm:py-10">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-10 px-4 sm:px-6 opacity-70 text-xs sm:text-sm">
           <Image src="/images/icons-comp/kVZ1z4VT-travelleisure.svg" alt="Condé Nast Traveler" width={100} height={30} />
@@ -24,7 +24,7 @@ export default function PrimaryFooter(): JSX.Element {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
+      <div className="max-w-7xl mx-auto py-12 sm:py-16 md:py-20 bg-[#242323]  px-4 sm:px-6 md:px-8">
         <div className="hidden lg:grid lg:grid-cols-5 gap-8">
           {/* BLACK TOMATO */}
           <div className="space-y-3 sm:space-y-4">
@@ -173,14 +173,14 @@ export default function PrimaryFooter(): JSX.Element {
         </div>
 
         {/* Mobile Accordion */}
-        <div className="lg:hidden space-y-0 border-t border-white/10">
+        <div className="lg:hidden spay-0 border-t  border-white/10">
           {/* BLACK TOMATO */}
           <div className="border-b border-white/10">
             <button
               onClick={() => toggleSection("blacktomato")}
               className="w-full flex items-center justify-between py-5 text-left"
             >
-              <h4 className="text-xs tracking-widest text-white font-semibold">
+              <h4 className="text-sm tracking-wide text-gray-400 font-semibold font-brandon">
                 BLACK TOMATO
               </h4>
               {openSection === "blacktomato" ? (
@@ -233,7 +233,7 @@ export default function PrimaryFooter(): JSX.Element {
               onClick={() => toggleSection("useful")}
               className="w-full flex items-center justify-between py-5 text-left"
             >
-              <h4 className="text-xs tracking-widest text-white font-semibold">
+              <h4 className="text-sm tracking-wide text-gray-400 font-semibold font-brandon">
                 USEFUL INFORMATION
               </h4>
               {openSection === "useful" ? (
@@ -272,7 +272,7 @@ export default function PrimaryFooter(): JSX.Element {
               onClick={() => toggleSection("destinations")}
               className="w-full flex items-center justify-between py-5 text-left"
             >
-              <h4 className="text-xs tracking-widest text-white font-semibold">
+              <h4 className="text-sm tracking-wide text-gray-400 font-semibold font-brandon">
                 POPULAR DESTINATIONS
               </h4>
               {openSection === "destinations" ? (
@@ -312,7 +312,7 @@ export default function PrimaryFooter(): JSX.Element {
               onClick={() => toggleSection("who")}
               className="w-full flex items-center justify-between py-5 text-left"
             >
-              <h4 className="text-xs tracking-widest text-white font-semibold">
+              <h4 className="text-sm tracking-wide text-gray-400 font-semibold font-brandon">
                 WHO
               </h4>
               {openSection === "who" ? (
@@ -340,7 +340,7 @@ export default function PrimaryFooter(): JSX.Element {
               onClick={() => toggleSection("what")}
               className="w-full flex items-center justify-between py-5 text-left"
             >
-              <h4 className="text-xs tracking-widest text-white font-semibold">
+              <h4 className="text-sm tracking-wide text-gray-400 font-semibold font-brandon">
                 WHAT
               </h4>
               {openSection === "what" ? (

@@ -36,17 +36,17 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-4">
-        <h1 className="max-w-4xl text-2xl sm:text-4xl md:text-4xl lg:text-[55px] font-medium  tracking-widest font-alternate ">
+        <h1 className="max-w-4xl text-5xl sm:text-5xl md:text-6xl lg:text-[55px] font-medium  tracking-wider font-alternate ">
           PUT THE WORLD <br />
           IN YOUR HANDS
         </h1>
-        <p className=" my-8 text-xs sm:text-sm md:text-sm tracking-widest  text-white/90  font-brandon">
+        <p className=" my-8 text-xs sm:text-sm md:text-sm tracking-wider  text-white/90  font-brandon">
           AWARD-WINNING LUXURY TRAVEL EXPERTS CRAFTING BESPOKE JOURNEYS FOR DISCERNING
           TRAVELLERS SINCE 2005
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <button className="rounded-xs border border-white/70  sm:px-8 py-2 sm:py-3 
-  text-[11px] leading-[12px] font-bold tracking-[1.2px] transition hover:bg-white hover:text-black">
+        <div className=" mt-8 md:w-full">
+          <button className="rounded-xs border border-white/70  sm:px-12 py-2 sm:py-3 
+  text-[11px] px-6 font-bold tracking-[1.2px] transition hover:bg-white hover:text-black">
            JOURNEYS THAT INSPIRE
           </button>
          

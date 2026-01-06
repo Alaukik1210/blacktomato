@@ -117,18 +117,18 @@ export default function PressCarousel() {
             >
               <div className="flex flex-col items-center text-center h-full justify-between gap-4 sm:gap-6 md:gap-8 py-1 md:py-2">
                 {/* Quote */}
-                <p className="text-xs sm:text-sm md:text-sm uppercase font-semibold tracking-widest text-gray-700 leading-relaxed font-brandon">
+                <p className="text-xs sm:text-sm md:text-sm uppercase font-semibold tracking-widest text-gray-500 leading-relaxed font-brandon max-w-[200px] sm:max-w-full">
                   {item.quote}
                 </p>
 
                 {/* Logo */}
-                <div className="relative h-6 sm:h-7 md:h-8 w-24 sm:w-28 md:w-32 flex-shrink-0">
+                <div className="relative h-10 sm:h-7 md:h-10 w-36 sm:w-28 md:w-40 flex-shrink-0">
                   <Image
                     src={item.logo}
                     alt={item.alt}
                     fill
                     className="object-contain"
-                    sizes="128px"
+                    sizes="160px"
                   />
                 </div>
               </div>

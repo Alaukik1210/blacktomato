@@ -5,7 +5,7 @@ export default function ReadyToStart() {
       style={{ backgroundImage: "url('/images/next.png')" }}
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 text-center text-white">
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium tracking-widest font-alternate sm:mb-4">
+        <h2 className="text-5xl sm:text-5xl md:text-5xl font-medium tracking-wider font-alternate sm:mb-4">
           SO, READY TO START?
         </h2>
 
