@@ -1,42 +1,30 @@
 "use client";
 
-import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
+
+
   const handleScroll = () => {
     window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
   };
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Desktop Video */}
       <video
-        className="absolute inset-0 hidden h-full w-full object-cover md:block"
+        className="absolute inset-0 h-full w-full object-cover will-change-transform"
         src="/videos/hero-desktop.mp4"
         autoPlay
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
       />
 
-      {/* Mobile Video */}
-      <video
-        className="absolute inset-0 block h-full w-full object-cover md:hidden"
-        src="/videos/hero-mobile.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-      />
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40" />
+     
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-4">
-        <h1 className="max-w-4xl text-5xl sm:text-5xl md:text-6xl lg:text-[55px] font-medium  tracking-wider font-alternate ">
+        <h1 className="max-w-4xl text-5xl sm:text-5xl md:text-6xl lg:text-[55px] font-medium  tracking-wider lg:tracking-widest font-alternate ">
           PUT THE WORLD <br />
           IN YOUR HANDS
         </h1>
