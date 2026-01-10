@@ -45,7 +45,7 @@ export default function OurPurposePage() {
             {/* Left Image */}
             <div className="relative -mt-10 md:-mt-32 lg:-mt-60 z-10 w-full aspect-[4/3]">
               <Image
-                src="/images/about/image.jpg"
+                src="/images/about/Image.jpg"
                 alt="Dramatic mountain landscape"
                 height={800}
                 width={500}
@@ -123,7 +123,7 @@ export default function OurPurposePage() {
             {/* Left Image */}
             <div className="relative -mt-10 md:-mt-32 lg:-mt-20 z-10 md:pl-20 w-full aspect-[4/3]">
               <Image
-                src="/images/about/image-3.jpg"
+                src="/images/about/Image-3.jpg"
                 alt="Dramatic mountain landscape"
                 height={650}
                 width={450}
