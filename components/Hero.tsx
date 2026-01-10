@@ -28,7 +28,7 @@ export default function Hero() {
           PUT THE WORLD <br />
           IN YOUR HANDS
         </h1>
-        <p className=" my-8 text-xs sm:text-sm md:text-sm tracking-wider  text-white/90  font-brandon">
+        <p className=" my-8 text-xs sm:text-sm md:text-sm font-semibold tracking-wider  text-white/90  font-brandon">
           AWARD-WINNING LUXURY TRAVEL EXPERTS CRAFTING BESPOKE JOURNEYS FOR DISCERNING
           TRAVELLERS SINCE 2005
         </p>
