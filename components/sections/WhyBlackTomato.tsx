@@ -11,29 +11,25 @@ const features: Feature[] = [
   {
     title: "Award-winning planners",
     color: "text-amber-500",
-    icon: "/images/icons-comp/UHVNpPRV-award-icon.svg",
+    icon: "/images/whyus/im1.png",
   },
   {
     title: "No-obligation quotes",
     color: "text-orange-500",
-    icon: "/images/icons-comp/Icons-1.svg",
+    icon: "/images/whyus/im2.png",
   },
   {
     title: "No planning fees",
     color: "text-emerald-500",
-    icon: "/images/icons-comp/1.svg",
+    icon: "/images/whyus/im3.png",
   },
   {
     title: "24/7 on the ground support",
     color: "text-sky-600",
-    icon: "/images/icons-comp/MSa4gZI8-support.svg",
+    icon: "/images/whyus/im4.png",
   },
 
-  {
-    title: "Expert private guides",
-    color: "text-purple-500",
-    icon: "/images/icons-comp/ico.svg",
-  },
+  
 ];
 
 export default function WhyBlackTomato(): JSX.Element {
@@ -46,7 +42,7 @@ export default function WhyBlackTomato(): JSX.Element {
         </h2>
 
         {/* Features */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-14">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-14">
           {features.map((item, idx) => (
             <div key={idx} className="flex flex-col items-center">
               <Image
@@ -54,11 +50,9 @@ export default function WhyBlackTomato(): JSX.Element {
                 alt={item.title}
                 height={200}
                 width={200}
-                className={`w-20 h-20 mb-2 ${item.color}`}
+                className={`w-60 h-80 mb-2 ${item.color}`}
               />
-              <p className="text-lg text-gray-600 text-center max-w-[160px]">
-                {item.title}
-              </p>
+             
             </div>
           ))}
         </div>

@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { div } from "framer-motion/client";
 
 export default function OurValuesScrollSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -34,9 +35,10 @@ export default function OurValuesScrollSection() {
   const card3Y = useTransform(scrollYProgress, [0.6, 0.7], [40, 0]);
 
   return (
-    <div ref={containerRef} className="relative">
+    <div className="">
+    <div ref={containerRef} className="relative ">
       {/* Sticky viewport */}
-      <div className="sticky top-0 h-screen overflow-hidden">
+      <div className="sticky top-0 h-screen overflow-hidden ">
         {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -45,20 +47,21 @@ export default function OurValuesScrollSection() {
 
         {/* ---------------- HEADING ---------------- */}
         <motion.div
-          className="absolute top-24 left-8 md:left-20 max-w-xl"
+          className="absolute top-24 left-8 md:left-20 max-w-5xl"
           style={{ opacity: headingOpacity, y: headingY }}
         >
-          <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-widest text-emerald-400">
+          <h2 className="text-[#379C8A] font-alternate font-medium tracking-widest uppercase pt-10 md:pt-20 lg:pt-20 text-5xl md:text-7xl lg:text-[145px] leading-none w-full">
             Our Values
           </h2>
-          <p className="mt-4 text-sm md:text-base uppercase tracking-wide text-white/90">
+          <p className="text-base md:text-lg lg:text-lg text-white font-semibold font-brandon tracking-wide uppercase">
             These three things keep us on course — whatever we do,
             and wherever in the world we find ourselves
           </p>
+
         </motion.div>
 
         {/* ---------------- CARDS ---------------- */}
-        <div className="absolute inset-x-0 bottom-24 px-8 md:px-20">
+        <div className="absolute inset-x-0 bottom-80 px-8 md:px-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <motion.div
@@ -116,6 +119,7 @@ export default function OurValuesScrollSection() {
 
       {/* Scroll space */}
       <div className="h-[350vh]" />
+    </div>
     </div>
   );
 }

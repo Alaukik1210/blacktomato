@@ -68,33 +68,35 @@ export default function MissionScrollSection() {
 
         {/* ---------------- MISSION TEXT ---------------- */}
         <motion.div
-          className="absolute inset-0 flex items-center justify-center px-6"
+          className="absolute inset-0 flex  items-center justify-center px-6"
           style={{ opacity: missionOpacity, y: missionY }}
         >
           <p className="max-w-4xl text-center text-xl md:text-5xl lg:text-6xl font-alternate font-medium tracking-wide  uppercase">
             OUR MISSION IS TO CREATE REMARKABLE EXPERIENCES THAT{" "}
-            <span className="text-[#10b981]">THOUGHTFULLY</span> CONNECT OUR
-            CLIENTS TO THE WORLD, INSPIRING THEM TO EXPLORE IT WITH{" "}
-            <span className="text-orange-500">CURIOSITY</span>,{" "}
-            <span className="text-blue-600">HUMILITY</span> AND A SENSE OF
+            <span className="text-[#379C8A]">THOUGHTFULLY</span> CONNECT<br/> OUR
+            CLIENTS TO THE WORLD, INSPIRING THEM<br/> TO EXPLORE IT WITH{" "}
+            <span className="text-[#CC5426]">CURIOSITY</span>,{" "}
+            <span className="text-[#1E40AF]">HUMILITY</span> AND A SENSE OF
             WONDER.
           </p>
         </motion.div>
 
         {/* ---------------- VALUES ---------------- */}
         <motion.div
-          className="absolute inset-0 flex flex-col items-center justify-center gap-10"
-          style={{ opacity: valuesOpacity, y: valuesY }}
+          className="absolute inset-0 flex flex-col items-center justify-center gap-8 px-6"
+          style={{ opacity: valuesOpacity }}
         >
-          <div className="text-xl md:text-5xl lg:text-6xl font-alternate font-medium tracking-wide  uppercase text-[#10b981]">
-            Thoughtful
+          <div className="flex justify-end w-full max-w-4xl">
+            <div className="text-3xl md:text-5xl lg:text-6xl font-alternate font-medium tracking-wide uppercase text-[#379C8A] md:pr-72  px-8 py-4">
+              Thoughtful
+            </div>
           </div>
 
-          <div className="flex gap-12">
-            <div className="text-3xl md:text-4xl font-semibold tracking-widest text-orange-500 uppercase">
+          <div className="flex justify-center w-full max-w-4xl md:pl-52">
+            <div className="text-3xl md:text-5xl lg:text-6xl font-alternate font-medium tracking-wide uppercase text-[#CC5426]  px-4 py-4">
               Curious
             </div>
-            <div className="text-3xl md:text-4xl font-semibold tracking-widest text-blue-600 uppercase">
+            <div className="text-3xl md:text-5xl lg:text-6xl font-alternate font-medium tracking-wide uppercase text-[#1E40AF]  px-4 py-4">
               Humble
             </div>
           </div>

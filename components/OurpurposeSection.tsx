@@ -111,13 +111,13 @@ const section4LeftY = useTransform(
           style={{ opacity: section2Opacity, y: section2Y }}
         >
           <div className="text-center px-6 max-w-6xl">
-            <p className="text-xl md:text-2xl lg:text-6xl font-medium uppercase font-alternate tracking-wide ">
+            <p className="text-xl md:text-2xl lg:text-6xl font-medium uppercase font-alternate tracking-wider ">
               <span className="text-white">WE EXIST TO CREATE A LASTING IMPACT FOR OUR </span><br/>
-              <span style={{ color: "##CC5426" }}>CLIENTS</span>
+              <span style={{ color: "#CC5426" }}>CLIENTS</span>
               <span className="text-white">, OUR </span>
-              <span style={{ color: "##379C8A" }}>PARTNERS</span>
+              <span style={{ color: "#379C8A" }}>PARTNERS</span>
               <span className="text-white"> AND THE </span>
-              <span style={{ color: "##379C8A" }}>COMMUNITIES</span><br/>
+              <span style={{ color: "#379C8A" }}>COMMUNITIES</span><br/>
               <span className="text-white"> WE ENGAGE WITH.</span>
             </p>
           </div>
@@ -157,7 +157,7 @@ const section4LeftY = useTransform(
               <div className="max-w-lg lg:mr-40">
                 <h3
                   className="text-3xl md:text-5xl lg:text-6xl font-medium mb-6 uppercase tracking-wider"
-                  style={{ color: "##CC5426" }}
+                  style={{ color: "#CC5426" }}
                 >
                   FOR CLIENTS
                 </h3>
@@ -184,7 +184,7 @@ const section4LeftY = useTransform(
               <div className="max-w-lg lg:mr-40">
                 <h3
                   className="text-3xl md:text-4xl lg:text-6xl font-medium mb-6 uppercase tracking-wider"
-                  style={{ color: "#10b981" }}
+                  style={{ color: "#379C8A" }}
                 >
                   FOR PARTNERS
                   <br />
