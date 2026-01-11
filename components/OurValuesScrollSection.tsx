@@ -47,10 +47,11 @@ export default function OurValuesScrollSection() {
 
         {/* ---------------- HEADING ---------------- */}
         <motion.div
-          className="absolute top-24 left-8 md:left-20 max-w-5xl"
+          className="absolute top-24 left-8 md:left-20 max-w-6xl"
           style={{ opacity: headingOpacity, y: headingY }}
-        >
-          <h2 className="text-[#379C8A] font-alternate font-medium tracking-widest uppercase pt-10 md:pt-20 lg:pt-20 text-5xl md:text-7xl lg:text-[145px] leading-none w-full">
+        ><div className="max-w-6xl md:mx-60 md:my-12">
+
+          <h2 className="text-[#379C8A] font-alternate font-medium tracking-wide uppercase pt-10 md:pt-20 lg:pt-20 text-5xl md:text-7xl lg:text-[145px] leading-none w-full">
             Our Values
           </h2>
           <p className="text-base md:text-lg lg:text-lg text-white font-semibold font-brandon tracking-wide uppercase">
@@ -58,42 +59,46 @@ export default function OurValuesScrollSection() {
             and wherever in the world we find ourselves
           </p>
 
+        </div>
         </motion.div>
 
         {/* ---------------- CARDS ---------------- */}
-        <div className="absolute inset-x-0 bottom-80 px-8 md:px-20">
+        <div className="absolute inset-x-0 bottom-48 px-8 md:px-20 md:mx-52">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <motion.div
               style={{ opacity: card1Opacity, y: card1Y }}
               className="bg-white p-8 shadow-lg"
             >
-              <p className="text-xs uppercase tracking-widest text-orange-500 mb-2">
+              <p className="text-md uppercase font-brandon font-semibold tracking-widest text-[#CC5426] ">
                 Be
               </p>
-              <h3 className="text-2xl font-bold uppercase text-orange-500 mb-4">
+              <h3 className="text-6xl font-alternate tracking-wider font-medium uppercase text-[#CC5426] mb-2">
                 Curious
               </h3>
-              <p className="text-sm leading-relaxed text-gray-700">
-                Ours is a wide, wild world. We ask questions, explore
-                possibilities and embrace new ideas.
+              <h4 className="text-md uppercase tracking-widest font-semibold font-brandon py-2 text-gray-700">
+                Ours is a wide, wild world. 
+              </h4>
+              <p className="text-gray-500">
+                We like to ask questions. How can this be better? Where next? What&apos;s genuinely possible, and what do our clients really want? Put another way, we love questions – and we love innovators.
               </p>
             </motion.div>
-
             {/* Card 2 */}
             <motion.div
               style={{ opacity: card2Opacity, y: card2Y }}
               className="bg-white p-8 shadow-lg"
             >
-              <p className="text-xs uppercase tracking-widest text-emerald-500 mb-2">
+              <p className="text-md uppercase font-brandon font-semibold tracking-widest text-[#379C8A] ">
                 Be
               </p>
-              <h3 className="text-2xl font-bold uppercase text-emerald-500 mb-4">
+              <h3 className="text-6xl font-alternate tracking-wider font-medium uppercase text-[#379C8A] mb-2">
                 Thoughtful
               </h3>
-              <p className="text-sm leading-relaxed text-gray-700">
-                Because thinking is caring — for our clients,
-                our partners and the planet we share.
+              <h4 className="text-md uppercase tracking-widest font-semibold font-brandon py-2 text-gray-700">
+                Because thinking is caring
+              </h4>
+              <p className="text-gray-500">
+                Good things come to those who think. And, in our world, to think is to care. Not only for our clients, but for each other – and the planet that we share.
               </p>
             </motion.div>
 
@@ -102,15 +107,17 @@ export default function OurValuesScrollSection() {
               style={{ opacity: card3Opacity, y: card3Y }}
               className="bg-white p-8 shadow-lg"
             >
-              <p className="text-xs uppercase tracking-widest text-blue-600 mb-2">
+              <p className="text-md uppercase font-brandon font-semibold tracking-widest text-[#1E40AF] ">
                 Be
               </p>
-              <h3 className="text-2xl font-bold uppercase text-blue-600 mb-4">
+              <h3 className="text-6xl font-alternate tracking-wider font-medium uppercase text-[#1E40AF] mb-2">
                 Humble
               </h3>
-              <p className="text-sm leading-relaxed text-gray-700">
-                Confident but never arrogant — calm under pressure,
-                and always ready to listen.
+              <h4 className="text-md uppercase tracking-widest font-semibold font-brandon py-2 text-gray-700">
+                Let others do the talking
+              </h4>
+              <p className="text-gray-500">
+                We don&apos;t get carried away. We don&apos;t get caught up in the hype. We&apos;re calmly confident in what we do; graceful under pressure, proud but never arrogant about our achievements.
               </p>
             </motion.div>
           </div>
