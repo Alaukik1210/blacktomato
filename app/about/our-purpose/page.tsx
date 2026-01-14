@@ -7,38 +7,39 @@ import OurValuesScrollSection from "@/components/OurValuesScrollSection";
 
 export default function OurPurposePage() {
   return (
-    <div className="bg-white  ">
+    <div className="bg-white">
       <Navbar appearance="page-gradient-static" />
 
       {/* Hero Section */}
       <div
         style={{ backgroundImage: "url('/images/about/bg02.jpg')" }}
-        className="min-h-[70vh] bg-cover bg-center bg-no-repeat px-4 sm:px-6 md:px-8 lg:pl-60 relative"
+        className="min-h-[50vh] sm:min-h-[60vh] lg:min-h-[70vh] bg-cover bg-center bg-no-repeat px-4 sm:px-6 md:px-8 lg:pl-60 relative"
       >
-        <div className="container  md:px-4">
+        <div className="container md:px-4">
           {/* Heading */}
-          <h4 className="text-[#379C8A] font-alternate font-medium tracking-widest uppercase pt-32 sm:pt-28 md:pt-28 lg:pt-60 text-8xl md:text-[145px] leading-none">
+          <h4 className="text-[#379C8A] font-alternate font-medium tracking-widest uppercase pt-20 sm:pt-24 md:pt-28 lg:pt-60 text-5xl sm:text-6xl md:text-8xl lg:text-[145px] leading-none">
             ABOUT US
           </h4>
 
           {/* Content Section */}
-          <div className="flex flex-col md:flex-row lg:justify-evenly  pt-28  md:pt-20 pb-8 sm:pb-12 md:pb-0">
+          <div className="flex flex-col md:flex-row lg:justify-evenly pt-12 sm:pt-16 md:pt-20 lg:pt-28 pb-8 sm:pb-12 md:pb-0">
             {/* Hidden spacer for desktop */}
             <div className="text-white hidden lg:block space-y-6 lg:pr-8 text-right"></div>
 
             {/* Main Content */}
-            <div className="text-white space-y-4 sm:space-y-5 md:space-y-6 lg:mt-2 md:mt-12 lg:pr-8 text-left md:text-left max-w-full md:max-w-2xl lg:max-w-none">
+            <div className="text-white space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6 lg:mt-2 md:mt-12 lg:pr-8 text-left md:text-left max-w-full md:max-w-2xl lg:max-w-none">
               {/* Small heading */}
-              <p className="text-xs  tracking-wider font-semibold uppercase text-[#379C8A]">
+              <p className="text-xs tracking-wider font-semibold uppercase text-[#379C8A]">
                 ABOUT US
               </p>
 
               {/* Large heading */}
-              <h4 className=" text-5xl tracking-wider md:text-5xl lg:text-5xl font-medium  uppercase">
+              <h4 className="text-3xl sm:text-4xl tracking-wider md:text-5xl lg:text-5xl font-medium uppercase leading-tight">
                 AWARD-WINNING CREATORS OF
                 <br className="hidden sm:block" />
                 <span className="sm:hidden"> </span>
-                REMARKABLE TRAVEL <div className="block md:hidden"></div>{" "}
+                REMARKABLE TRAVEL{" "}
+                <span className="inline sm:hidden"><br /></span>
                 EXPERIENCES
               </h4>
             </div>
@@ -47,36 +48,33 @@ export default function OurPurposePage() {
       </div>
 
       {/* First Content Section - Overlapping Layout */}
-      <div className=" pb-20 md:pb-2 ">
-        <div className="container lg:mx-auto  px-4 md:px-8 lg:px-32">
-          <div
-            className="grid  grid-cols-1  md:grid-cols-[400px_1fr] 
-  lg:grid-cols-[500px_1fr] md:gap-4 lg:gap-16 items-center"
-          >
+      <div className="pb-12 sm:pb-16 md:pb-20 lg:pb-2">
+        <div className="container lg:mx-auto px-4 sm:px-6 md:px-8 lg:px-32">
+          <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] lg:grid-cols-[500px_1fr] md:gap-4 lg:gap-16 items-center">
             {/* Left Image */}
-            <div className=" relative  -mt-10  md:-mt-20  lg:-mt-60  z-10  w-full md:w-[400px] lg:w-[500px] aspect-[4/3]">
+            <div className="relative -mt-8 sm:-mt-10 md:-mt-20 lg:-mt-60 z-10 w-full md:w-[400px] lg:w-[500px] aspect-[4/3]">
               <Image
                 src="/images/about/Image.jpg"
                 alt="Dramatic mountain landscape"
                 height={800}
                 width={500}
-                className="object-contain"
+                className="object-contain w-full h-full"
               />
             </div>
 
             {/* Right Content */}
-            <div className="space-y-4 md:space-y-3 lg:pl-8  order-2 lg:order-1 lg:mb-12">
-              <p className="text-sm md:text-sm tracking-wider font-semibold uppercase text-gray-800">
+            <div className="space-y-3 sm:space-y-4 md:space-y-3 lg:pl-8 order-2 lg:order-1 lg:mb-12 mt-6 sm:mt-8 md:mt-0">
+              <p className="text-xs sm:text-sm md:text-sm tracking-wider font-semibold uppercase text-gray-800">
                 WHAT WE&apos;RE ABOUT
               </p>
-              <h2 className="text-5xl md:text-5xl lg:text-5xl font-medium tracking-wider md:leading-widest uppercase">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-medium tracking-wider leading-tight md:leading-widest uppercase">
                 WE&apos;RE A TEAM&nbsp;
                 <br className="hidden lg:block" />
                 OF PEOPLE IN THE&nbsp;
                 <br className="hidden lg:block" />
                 KNOW ABOUT TRAVEL
               </h2>
-              <p className="text-gray-500 text-md md:text-base lg:text-md w-[90%] md:w-full lg:w-4/5 leading-loose">
+              <p className="text-gray-500 text-sm sm:text-base md:text-base lg:text-md w-full sm:w-[95%] md:w-full lg:w-4/5 leading-relaxed lg:leading-loose">
                 And we&apos;re on a mission to create remarkable experiences
                 that thoughtfully connect our clients to the world and inspire
                 them to explore it with curiosity, humility and a sense of
@@ -89,7 +87,7 @@ export default function OurPurposePage() {
 
       {/* Second Content Section - What We're About */}
       <div className="relative bg-white py-12 sm:py-14 md:py-16 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-32">
-        <div className="container md:mx-auto px-4">
+        <div className="container md:mx-auto px-4 max-w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             {/* Left Content */}
             <div className="space-y-4 sm:space-y-5 md:space-y-6 order-2 lg:order-1 lg:col-span-4 lg:pl-28">
@@ -113,7 +111,7 @@ export default function OurPurposePage() {
             </div>
 
             {/* Right Image */}
-            <div className="relative order-1 lg:order-2 -mt-10 md:-mt-48 lg:-mt-40 z-20 w-full lg:w-[60vw] lg:absolute lg:right-0">
+            <div className="relative order-1 lg:order-2 -mt-8 sm:-mt-10 md:-mt-48 lg:-mt-40 z-20 w-full lg:w-[60vw] lg:absolute lg:right-0">
               <Image
                 src="/images/about/bg03.jpg"
                 alt="Coastal mountain view"
@@ -132,13 +130,13 @@ export default function OurPurposePage() {
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
             {/* Left Image */}
-            <div className="relative -mt-10 md:-mt-32 lg:-mt-20 z-10 md:pl-20 w-full aspect-[4/3]">
+            <div className="relative -mt-8 sm:-mt-10 md:-mt-32 lg:-mt-20 z-10 w-full md:pl-0 lg:pl-20 aspect-[4/3]">
               <Image
                 src="/images/about/Image-3.jpg"
                 alt="Dramatic mountain landscape"
                 height={650}
                 width={450}
-                className="object-contain"
+                className="object-contain w-full h-full"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
               />
             </div>
@@ -175,15 +173,15 @@ export default function OurPurposePage() {
       {/* Fourth Section */}
       <div className="relative pb-12 sm:pb-16 md:pb-20 lg:pb-2">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 overflow-hidden items-center">
             {/* Left Image */}
-            <div className="relative -mt-10 md:-mt-32 lg:-mt-10 z-8 w-full lg:w-[120%] aspect-[4/3]">
+            <div className="relative -mt-8 sm:-mt-10 md:-mt-32 lg:-mt-10 z-8 w-full lg:w-[120%]  aspect-[4/3]">
               <Image
                 src="/images/about/bg04.jpg"
                 alt="Dramatic mountain landscape"
                 height={1200}
                 width={1200}
-                className="object-contain"
+                className="object-contain w-full h-full"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
               />
             </div>
@@ -217,7 +215,7 @@ export default function OurPurposePage() {
 
       {/* Regenerative Travel Section */}
       <div className="relative bg-white py-12 sm:py-14 md:py-16 lg:py-24 px-4 sm:px-6 md:pl-20 overflow-hidden">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 max-w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-1 items-start">
             {/* Left Content */}
             <div className="space-y-4 sm:space-y-5 md:space-y-6 order-2 lg:order-1 lg:col-span-5 lg:pl-60">
@@ -241,7 +239,7 @@ export default function OurPurposePage() {
             </div>
 
             {/* Right Image */}
-            <div className="relative order-1 lg:order-2 -mt-10 md:-mt-20 lg:-mt-20 z-20 w-full lg:w-[60vw] lg:absolute lg:left-[900px]">
+            <div className="relative order-1 lg:order-2 -mt-8 sm:-mt-10 md:-mt-20 lg:-mt-20 z-20 w-full lg:w-[60vw] lg:absolute lg:left-[900px]">
               <Image
                 src="/images/about/bg05.jpg"
                 alt="Coastal mountain view"
@@ -260,8 +258,8 @@ export default function OurPurposePage() {
         <MissionScrollSection />
         <OurValuesScrollSection />
 
-        <section className="relative w-full px-4 sm:px-6 md:px-0">
-          <div className="relative w-full aspect-video overflow-hidden rounded-md">
+        <section className="relative w-full px-4 sm:px-6 lg:px-0">
+          <div className="relative w-full aspect-video rounded-md">
             <video
               className="absolute inset-0 h-full w-full object-cover will-change-transform z-30"
               muted
@@ -289,7 +287,7 @@ export default function OurPurposePage() {
 
         {/* Why The Name Section */}
         <div className="relative bg-white py-12 sm:py-14 md:py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 max-w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-start">
               {/* Left Content */}
               <div className="space-y-3 sm:space-y-4">
@@ -312,7 +310,7 @@ export default function OurPurposePage() {
               </div>
 
               {/* Right Image */}
-              <div className="relative order-1 lg:order-2 -mt-10 z-0 md:-mt-48 lg:-mt-40 w-full lg:w-[35vw] lg:absolute lg:-right-24">
+              <div className="relative order-1 lg:order-2 -mt-8 sm:-mt-10 md:-mt-48 lg:-mt-40 z-0 w-full lg:w-[35vw] lg:absolute lg:-right-24">
                 <Image
                   src="/images/about/bg14.jpg"
                   alt="Canyon with Black Tomato branding"
@@ -331,13 +329,13 @@ export default function OurPurposePage() {
           <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-32">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
               {/* Left Image */}
-              <div className="relative -mt-10 md:-mt-32 lg:mt-6 z-12 md:pl-20 w-full aspect-[4/3] scale-180 md:ml-20">
+              <div className="relative -mt-8 sm:-mt-10 md:-mt-32 lg:mt-6 z-12 w-full md:pl-0 lg:pl-20 md:ml-0 lg:ml-20 aspect-[4/3]">
                 <Image
                   src="/images/about/bg11.jpg"
                   alt="Boat on turquoise water"
                   height={650}
                   width={450}
-                  className="object-contain"
+                  className="object-contain w-full h-full"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
                 />
               </div>
@@ -371,7 +369,7 @@ export default function OurPurposePage() {
         </button>
       </div>
 
-      <section>
+      <section className="w-full">
         <Image
           src="/images/about/bg12.jpg"
           alt="Scenic landscape"
